@@ -1,14 +1,13 @@
 package com.grupo02.bridge;
 
-/**
- *
- * @author Mauricio Ortiz Ochoa
- */
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 public class InscripcionLineaImpl  implements InscripcionImpl{
 
     @Override
     public void generarUI() {
-        System.out.println("UI generada para Inscripción en línea");
+        log.info("UI generada para Inscripción en línea");
     }
 
     @Override

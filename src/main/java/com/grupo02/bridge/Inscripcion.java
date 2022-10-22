@@ -1,36 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.grupo02.bridge;
 
-/**
- *
- * @author Mauricio Ortiz Ochoa
- */
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 public abstract class Inscripcion {
-    
-    private InscripcionImpl inscripcionImpl;
-    private NivelEstudio nivelEstudio;
 
-    public Inscripcion(InscripcionImpl inscripcionImpl) {
-        this.inscripcionImpl = inscripcionImpl;
-    }
-    
-    public void inscribir(){
-        System.out.println("Estudiante inscrito...");
-    }
-    
-    public abstract boolean controlNivelEstudio();
+  private final InscripcionImpl inscripcionImpl;
+  private NivelEstudio nivelEstudio;
 
-    public NivelEstudio getNivelEstudio() {
-        return nivelEstudio;
-    }
+  Inscripcion(InscripcionImpl inscripcionImpl) {
+    this.inscripcionImpl = inscripcionImpl;
+  }
 
-    public void setNivelEstudio(NivelEstudio nivelEstudio) {
-        this.nivelEstudio = nivelEstudio;
-    }
-    
-    
-    
+  public void inscribir() {
+    log.info("Estudiante inscrito...");
+  }
+
+  public abstract boolean controlNivelEstudio();
+
+  public NivelEstudio getNivelEstudio() {
+    return nivelEstudio;
+  }
+
+  public void setNivelEstudio(NivelEstudio nivelEstudio) {
+    this.nivelEstudio = nivelEstudio;
+  }
 }

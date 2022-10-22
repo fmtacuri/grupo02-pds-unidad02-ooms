@@ -22,6 +22,7 @@ public class PdsUnidad02OomsApplication {
     inscripcion1.setNivelEstudio(NivelEstudio.GRADO);
     if (inscripcion1.controlNivelEstudio()) {
       inscripcion1.inscribir();
+      log.info("Nivel de estudio: {}", inscripcion1.getNivelEstudio());
     } else {
       log.info("No es posible inscribir al estudiante");
     }
